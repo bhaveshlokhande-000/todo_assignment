@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Todo App</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Todo List</h1>
+    <div class="form">
+        <form action="/" method="POST">
+            <input type="text" name="content" id="content">
+            <input type="submit" value="Add" class="button button3">
+        </form>
+    </div>
+
+    {% if tasks|length < 1 %} <h4 style="text-align: center">There are no tasks. Create one below!</h4>
+        {% else %}
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col ">task</th>
+                    <th scope="col">added</th>
+                    <th scope="col">actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for task in tasks %}
+                <tr>
+                    <td>
+                        <div>{{ task.content }}</div>
+                    </td>
+                    <td>
+                        <div>{{ task.date_created.date() }}</div>
+                    </td>
+                    <td>
+                        <a href="/delete/{{task.id}}" class="button button1">Delete</a>
+                        <br>
+                        <a href="/update/{{task.id}}" class="button button2">Update</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table> {% endif %}
+
+</div>
+{% endblock %}

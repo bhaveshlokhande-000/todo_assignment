@@ -1,0 +1,75 @@
+body, html {
+    margin: 0;
+    font-family: sans-serif;
+   
+}
+
+.content {
+    margin: 0 auto;
+    width: 600px;
+}
+
+td div
+{
+         padding-top: 50px;
+     font-weight:bolder;
+
+}
+
+table, td, th {
+    text-align: center;
+    border: 1px solid #aaa;
+
+}
+
+table { 
+    border-collapse: collapse;
+    width: 100%; 
+}
+
+th {
+    font-size:150%;
+    height: 30px;
+}
+
+
+.form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+#content {
+    width: 70%;
+}
+
+.button{
+  border: none;
+  color: white;
+  padding: 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 2px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.button1{
+    background-color:rgb(238, 83, 83);
+}
+.button2{
+    background-color:rgb(98, 98, 233);
+}
+
+.button3{
+    width: 100px;
+    height: 40px;
+    background-color:rgb(102, 241, 102);
+}
+
+a,a:hover{
+    text-decoration: none;
+    color: white
+}
